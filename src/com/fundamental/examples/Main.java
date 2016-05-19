@@ -13,8 +13,8 @@ public class Main {
         Scanner num = new Scanner(System.in);
         System.out.print("Enter the range of numbers = ");
         int n = num.nextInt();
-        int i = 0 , pr = 0;
-        String writePrime = "";
+     //   int i = 0 , pr = 0;
+      //  String writePrime = "";
         List<Integer> primeList = new ArrayList();
 
         /*for(i=1;i<n;i++){
@@ -33,7 +33,7 @@ public class Main {
 
         //Method 2 =====>Print prime numbers in a list
 
-        for(i=1;i<n;i++){
+        /*for(i=1;i<n;i++){
             int inc = 0;
             for(pr=i;pr>=1;pr--){
                 if(i%pr==0){
@@ -46,7 +46,17 @@ public class Main {
         }
         for(int k=0;k<primeList.size();k++){
             System.out.print(primeList.get(k)+" ");
+        }*/
+
+
+        //Method 3=====> Using prime class print prime
+        Prime primeRange = new Prime(n,primeList);
+        List<Integer> outputList = primeRange.printPrime();
+        for(int k=0;k<outputList.size();k++){
+            System.out.print(primeList.get(k)+" ");
         }
+
+
         /*Enter the range of numbers = 100
         2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97*/
     }
