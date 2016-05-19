@@ -12,17 +12,17 @@ public class Main {
         int i = 0 , pr = 0;
         String writePrime = "";
 
-        for(i=1;i<=n;i++){
+        for(i=1;i<n;i++){
             int inc = 0;
-            for(pr=i;i>=1;i--){
+            for(pr=i;pr>=1;pr--){
                 if(i%pr==0){
                     inc = inc + 1;
                 }
             }
             if(inc==2){
-                writePrime = writePrime + i;
+                writePrime = writePrime + i+ " ";
             }
         }
-        System.out.print("=======>"+writePrime);
+        System.out.print(writePrime);
     }
 }
