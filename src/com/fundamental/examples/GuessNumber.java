@@ -26,9 +26,9 @@ public class GuessNumber {
         sign = sn.next();
         ans = 2*Math.sqrt(result)+2;
         if(sign.equals("+")){
-            System.out.println("Number in your mind is "+(Math.sqrt(1 + ans)-1));
+            System.out.println("Number in your mind is "+Math.round(Math.sqrt(1 + ans) - 1));
         }else{
-            System.out.println("Number in your mind is "+((-1) - Math.sqrt(1 + ans)));
+            System.out.println("Number in your mind is "+Math.round((-1) - Math.sqrt(1 + ans)));
         }
     }
 
