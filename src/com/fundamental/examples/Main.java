@@ -1,16 +1,12 @@
 package com.fundamental.examples;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
 
         //Method 1==============>
 
-        Scanner num = new Scanner(System.in);
+        /*Scanner num = new Scanner(System.in);
         System.out.print("Enter the range of numbers = ");
         int n = num.nextInt();
         int i = 0, pr = 0;
@@ -55,9 +51,17 @@ public class Main {
         for (int k = 0; k < outputList.size(); k++) {
             System.out.print(primeList.get(k) + " ");
         }
-
+*/
 
         /*Enter the range of numbers = 100
         2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97*/
+
+
+        //Test Guess Number
+
+        GuessNumber guessNumber = new GuessNumber();
+        guessNumber.processForGuessNumber();
+        guessNumber.guessNumber();
+        guessNumber.processForGuessAnswer();
     }
 }
