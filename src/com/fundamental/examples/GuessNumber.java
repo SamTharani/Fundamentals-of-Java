@@ -8,7 +8,7 @@ public class GuessNumber {
     private String sign;
     private double ans;
 
-    public void processForGuessNumber()
+    public void askQuestion()
     {
         System.out.println("=======THIS PROCESS FOR FIND THE UNKNOWN NUMBER======");
         System.out.println("1. Choose a number in your mind ");
@@ -49,5 +49,11 @@ public class GuessNumber {
 
     public void setResult(int result) {
         this.result = result;
+    }
+
+    public static void main(String[] args) {
+        GuessNumber guessNumber = new GuessNumber();
+        guessNumber.askQuestion();
+        guessNumber.guessNumber();
     }
 }

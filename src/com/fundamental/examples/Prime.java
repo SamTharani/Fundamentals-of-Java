@@ -8,9 +8,9 @@ public class Prime {
     private int range,i=0,pr=0;
     private List<Integer> primeList;
 
-    public Prime(int range, List<Integer> primeList) {
+    public Prime(int range) {
         this.range = range;
-        this.primeList = primeList;
+        this.primeList = new ArrayList<Integer>();
     }
 
     public List<Integer> printPrime(){
@@ -26,5 +26,10 @@ public class Prime {
             }
         }
         return primeList;
+    }
+
+    public static void main(String[] args) {
+        Prime prime = new Prime(100);
+        System.out.println("prime = " + prime.printPrime().toString());
     }
 }
