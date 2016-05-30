@@ -29,7 +29,27 @@ public class Prime {
     }
 
     public static void main(String[] args) {
-        Prime prime = new Prime(100);
-        System.out.println("prime = " + prime.printPrime().toString());
+
+        Runtime runtime = Runtime.getRuntime();
+        int mb = 1024 * 1024;
+
+        long startTime = System.currentTimeMillis();
+
+        Prime prime = new Prime(1000000);
+        System.out.println("prime = " + prime.printPrime());
+
+        long endTime = System.currentTimeMillis();
+        long elapseTime = endTime - startTime;
+
+        System.out.println("elapseTime = " + elapseTime/1000);
+
+        long totalMemory = runtime.totalMemory();
+        System.out.println("totalMemory = " + totalMemory/mb+" MB");
+
+        long freeMemory = runtime.freeMemory();
+        System.out.println("freeMemory = " + freeMemory/mb+" MB");
+
+        long usedMemory = totalMemory - freeMemory;
+        System.out.println("usedMemory = " + usedMemory/mb+" MB");
     }
 }
